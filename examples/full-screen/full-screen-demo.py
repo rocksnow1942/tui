@@ -43,7 +43,7 @@ def do_exit():
 
 yes_button = Button(text="Yes", handler=accept_yes)
 no_button = Button(text="No", handler=accept_no)
-textfield = TextArea(lexer=PygmentsLexer(HtmlLexer))
+
 checkbox1 = Checkbox(text="Checkbox")
 checkbox2 = Checkbox(text="Checkbox")
 
@@ -96,6 +96,7 @@ animal_completer = WordCompleter(
     ],
     ignore_case=True,
 )
+textfield = TextArea(lexer=PygmentsLexer(HtmlLexer), completer=animal_completer)
 
 root_container = HSplit(
     [
@@ -180,7 +181,7 @@ root_container = MenuContainer(
         Float(
             xcursor=True,
             ycursor=True,
-            content=CompletionsMenu(max_height=16, scroll_offset=1),
+            content=CompletionsMenu(max_height=36, scroll_offset=1),
         ),
     ],
 )
