@@ -104,7 +104,6 @@ def main() -> None:
             align=pt_layout.HorizontalAlign.CENTER,
             padding=3,
         ),
-        height=3,
         style="class:button-bar",
     )
 
